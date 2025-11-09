@@ -11,4 +11,4 @@ langchain-community==0.3.2
 langchain-google-genai==2.0.1
 pydantic==2.9.2
 watchfiles==1.1.1
-gunicorn==23.2.1
+gunicorn==23.0.0
