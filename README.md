@@ -161,17 +161,17 @@ Include GIFs or images showing:
 
 Example Markdown for image/GIF embedding:
 
-```markdown
+
 ![Home Page](screenshots/home.png)
 ![Generate Quiz](screenshots/quiz.png)
 ![Quiz Answers](screenshots/answers.png)
 ![History Tab](screenshots/history.png)
 ![Quiz Details](screenshots/quiz_details.png)
-```
 
-```markdown
+
+
 ![Demo](screenshots/demo.mp4)
-```
+
 
 ---
 
