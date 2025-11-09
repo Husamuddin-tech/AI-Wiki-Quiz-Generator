@@ -1,6 +1,7 @@
 # AI Wiki Quiz Generator
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-lightblue?logo=fastapi)](https://fastapi.tiangolo.com/) [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-blue?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.4-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12.2-orange?logo=python&logoColor=white)](https://www.crummy.com/software/BeautifulSoup/) [![LangChain](https://img.shields.io/badge/LangChain-0.1.0-purple)](https://www.langchain.com/) [![Gemini LLM](https://img.shields.io/badge/Gemini-LLM-green)](https://developers.generativeai.google/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-lightblue?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react&logoColor=white)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-blue?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.4-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12.2-orange?logo=beautifulsoup&logoColor=white)](https://www.crummy.com/software/BeautifulSoup/) [![LangChain](https://img.shields.io/badge/LangChain-0.1.0-purple?logo=langchain&logoColor=white)](https://www.langchain.com/) [![Google Gemini](https://img.shields.io/badge/Google_Gemini-LLM-green?logo=google&logoColor=white)](https://developers.generativeai.google/)
+
 
 ---
 
@@ -173,8 +174,9 @@ Here’s a visual walkthrough of the **AI Wiki Quiz Generator**:
 *Clicking “Details” opens a modal showing the full quiz using the QuizDisplay component.*
 
 
-> **Note:** GitHub cannot preview `.mp4` files directly. To include a video, either provide a **GIF** or link the video:
+> **Note:** GitHub cannot preview `.mp4` files directly. So here is the Demo Video Link:  
 [Watch Demo Video](https://drive.google.com/file/d/1ZXeuPsjsoYecZpklNybGKkwRevb6D8O5/view?usp=drive_link)
+
 
 
 
