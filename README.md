@@ -1,14 +1,6 @@
 # AI Wiki Quiz Generator
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-lightblue?logo=fastapi)](https://fastapi.tiangolo.com/)  
-[![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)  
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-blue?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.4-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/)  
-[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12.2-orange?logo=python&logoColor=white)](https://www.crummy.com/software/BeautifulSoup/)  
-[![LangChain](https://img.shields.io/badge/LangChain-0.1.0-purple)](https://www.langchain.com/)  
-[![Gemini LLM](https://img.shields.io/badge/Gemini-LLM-green)](https://developers.generativeai.google/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-lightblue?logo=fastapi)](https://fastapi.tiangolo.com/) [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-blue?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.4-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12.2-orange?logo=python&logoColor=white)](https://www.crummy.com/software/BeautifulSoup/) [![LangChain](https://img.shields.io/badge/LangChain-0.1.0-purple)](https://www.langchain.com/) [![Gemini LLM](https://img.shields.io/badge/Gemini-LLM-green)](https://developers.generativeai.google/)
 
 ---
 
@@ -90,6 +82,7 @@ Create `.env`:
 
 ```
 GEMINI_API_KEY="YOUR_API_KEY_HERE"
+DATABASE_URL=postgresql+psycopg2://exampleuser:examplepassword@localhost/examledb
 ```
 
 Run server:
@@ -169,12 +162,16 @@ Include GIFs or images showing:
 Example Markdown for image/GIF embedding:
 
 ```markdown
-![Generate Quiz](screenshots/generate_quiz.gif)
-![History Tab](screenshots/history_tab.gif)
-![Quiz Details](screenshots/quiz_details.gif)
+![Home Page](screenshots/home.png)
+![Generate Quiz](screenshots/quiz.png)
+![Quiz Answers](screenshots/answers.png)
+![History Tab](screenshots/history.png)
+![Quiz Details](screenshots/quiz_details.png)
 ```
 
-Place GIFs in a `screenshots/` folder.
+```markdown
+![Demo](screenshots/demo.mp4)
+```
 
 ---
 
