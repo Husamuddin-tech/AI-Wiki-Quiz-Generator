@@ -1,136 +1,213 @@
-# AI Wiki Quiz Generator
+# AI Wiki Quiz Generator
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-[![Build: Backend](https://img.shields.io/github/actions/workflow/status/Husamuddin-tech/AI-Wiki-Quiz-Generator/backend.yml?branch=main)](https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator/actions)  
-[![Build: Frontend](https://img.shields.io/github/actions/workflow/status/Husamuddin-tech/AI-Wiki-Quiz-Generator/frontend.yml?branch=main)](https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator/actions)  
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)  
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-lightblue?logo=fastapi)](https://fastapi.tiangolo.com/)  
+[![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)  
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.3-blue?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.4-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/)  
+[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.12.2-orange?logo=python&logoColor=white)](https://www.crummy.com/software/BeautifulSoup/)  
+[![LangChain](https://img.shields.io/badge/LangChain-0.1.0-purple)](https://www.langchain.com/)  
+[![Gemini LLM](https://img.shields.io/badge/Gemini-LLM-green)](https://developers.generativeai.google/)
 
-## 🚀 Project Overview  
-The **AI Wiki Quiz Generator** enables automatic quiz creation from Wikipedia-style content using AI-driven processing.  
-It consists of:  
-- A **backend** service for processing content, generating questions and answers, storing quizzes.  
-- A **frontend** web interface for users to choose topics, generate quizzes and take them.
+---
 
-## 🎯 Why this matters  
-- Makes learning more engaging by turning articles into interactive quizzes.  
-- Helps educators and learners rapidly build knowledge‑reinforcement tools.  
-- Leverages AI to automate quiz‑generation for dynamic content.
+## 🚀 Project Overview
 
-## 📁 Repository Structure  
+**AI Wiki Quiz Generator** is a full-stack application that converts Wikipedia articles into structured quizzes using AI.  
+
+- Backend: Python (FastAPI) + LangChain + Gemini API  
+- Frontend: React + TailwindCSS  
+- Database: PostgreSQL / MySQL  
+- Features:
+  - Generates 5–10 questions per Wikipedia article
+  - Stores history of quizzes
+  - Interactive "Take Quiz" mode with scoring
+  - Responsive UI with Generate Quiz & History tabs  
+
+---
+
+## 🧩 Workflow Diagram
+
+```mermaid
+flowchart TD
+    A[User enters Wikipedia URL] --> B[Backend Scraper]
+    B --> C[Clean & Extract Article Text]
+    C --> D[Gemini LLM via LangChain]
+    D --> E[Generate Quiz JSON with Questions, Options, Answers, Explanation, Difficulty]
+    E --> F[Store Quiz in Database (PostgreSQL/MySQL)]
+    F --> G[Frontend displays Quiz]
+    G --> H[User can Take Quiz and Submit Answers]
+    G --> I[History Tab displays Past Quizzes]
+    I --> J[Click Details → Modal shows full quiz using QuizDisplay Component]
 ```
-AI‑Wiki‑Quiz‑Generator/
+
+---
+
+## 📁 Project Structure
+
+```
+AI-Wiki-Quiz-Generator/
 ├── backend/
-│   ├── venv/                       # Python Virtual Environment
-│   ├── database.py                 # SQLAlchemy setup and Quiz model
-│   ├── models.py                   # Pydantic Schemas for LLM output (QuizOutput)
-│   ├── scraper.py                  # Functions for fetching and cleaning Wikipedia HTML
-│   ├── llm_quiz_generator.py       # LangChain setup, prompt templates, and chain logic
-│   ├── main.py                     # FastAPI application and API endpoints
-│   ├── requirements.txt            # List of all Python dependencies
-│   └── .env                        # API keys and environment variables
-|
+│   ├── venv/
+│   ├── database.py
+│   ├── models.py
+│   ├── scraper.py
+│   ├── llm_quiz_generator.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .env
 ├── frontend/
 │   ├── src/
-│   │   ├── components/             # Reusable UI parts (e.g., QuizCard, TabButton, Modal)
-│   │   │   ├── QuizDisplay.jsx     # Reusable component for rendering generated quiz data
-│   │   │   └── HistoryTable.jsx
-│   │   ├── services/
-│   │   │   └── api.js              # Functions for communicating with the FastAPI backend
-│   │   ├── tabs/
-│   │   │   ├── GenerateQuizTab.jsx
-│   │   │   └── HistoryTab.jsx
-│   │   ├── App.jsx                 # Main React component, handles tab switching
-│   │   └── index.css               # Tailwind directives and custom styles
+│   │   ├── components/
+│   │   │   ├── QuizDisplay.jsx
+│   │   │   ├── HistoryTable.jsx
+│   │   │   └── Modal.jsx
+│   │   ├── services/api.js
+│   │   ├── tabs/GenerateQuizTab.jsx
+│   │   ├── tabs/HistoryTab.jsx
+│   │   ├── App.jsx
+│   │   └── index.css
 │   ├── package.json
-|
-└── README.md                       # Project Setup, Endpoints, and Testing Instructions
-
+└── README.md
 ```
-
-## 🛠️ Getting Started  
-```bash
-git clone https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator.git
-cd AI‑Wiki‑Quiz‑Generator
-```  
-Then follow `backend/` and `frontend/` readme instructions.
-
-## 🤝 Contributing  
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## 📄 License  
-This project is licensed under the [MIT License](LICENSE).
-
 
 ---
 
-## 📦 Backend Documentation
+## 🛠️ Setup Instructions
 
-# Backend – AI Wiki Quiz Generator
+### Backend
 
-[![Build](https://img.shields.io/github/actions/workflow/status/Husamuddin-tech/AI-Wiki-Quiz-Generator/backend.yml?branch=main)](https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator/actions)  
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
-
-## 🧩 What It Does  
-Handles fetching Wikipedia content, generating quiz questions, and providing RESTful APIs for frontend use.
-
-## 📦 Tech Stack  
-- Language: Python / Node.js  
-- Framework: FastAPI / Express  
-- Database: PostgreSQL / MongoDB  
-- AI Integration: OpenAI / Gemini API
-
-## 🧪 Setup Instructions  
 ```bash
 cd backend
-npm install
-cp .env.example .env
-npm start
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
-## 🔍 API Endpoints  
-| Method | Endpoint | Description |
-|--------|-----------|-------------|
-| GET | /quizzes | List all quizzes |
-| POST | /quizzes | Create new quiz |
-| GET | /quizzes/:id | Fetch quiz |
-| POST | /quizzes/:id/answer | Submit answers |
+Create `.env`:
 
-## 📄 License  
-Licensed under MIT.
+```
+GEMINI_API_KEY="YOUR_API_KEY_HERE"
+```
 
+Run server:
+
+```bash
+uvicorn main:app --reload
+```
 
 ---
 
-## 💻 Frontend Documentation
+### Frontend
 
-# Frontend – AI Wiki Quiz Generator
-
-[![Build](https://img.shields.io/github/actions/workflow/status/Husamuddin-tech/AI-Wiki-Quiz-Generator/frontend.yml?branch=main)](https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator/actions)  
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
-
-## 🎨 What It Is  
-React-based interface allowing users to input topics, generate quizzes, and interactively answer them.
-
-## 🛠 Tech Stack  
-- React + Vite / Next.js  
-- TailwindCSS / Material UI  
-- Backend API integration
-
-## 🚀 Setup  
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
-## 🧪 Testing  
+Access app at `http://localhost:5173`.
+
+---
+
+## 🔍 API Endpoints
+
+| Method | Endpoint                  | Description                            |
+|--------|---------------------------|----------------------------------------|
+| GET    | `/history`                | List all generated quizzes             |
+| POST   | `/generate_quiz`          | Generate a new quiz from URL           |
+| GET    | `/quiz/{quiz_id}`         | Fetch a specific quiz by ID            |
+| POST   | `/quiz/{quiz_id}/answer`  | Submit answers & get scoring           |
+
+---
+
+## 📄 Sample API Output
+
+```json
+{
+  "id": 1,
+  "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+  "title": "Alan Turing",
+  "summary": "Alan Turing was a British mathematician and computer scientist...",
+  "sections": ["Early life", "World War II", "Legacy"],
+  "quiz": [
+    {
+      "question": "Where did Alan Turing study?",
+      "options": ["Harvard University","Cambridge University","Oxford University","Princeton University"],
+      "answer": "Cambridge University",
+      "difficulty": "easy",
+      "explanation": "Mentioned in the 'Early life' section."
+    }
+  ],
+  "related_topics": ["Cryptography", "Enigma machine", "Computer science history"]
+}
+```
+
+---
+
+## 💻 Frontend Tabs
+
+### TAB 1 – Generate Quiz
+- Enter Wikipedia URL → Generate Quiz → Display structured quiz + related topics  
+
+### TAB 2 – History
+- Displays table of past quizzes  
+- "Details" button → Modal with full quiz  
+- "Take Quiz" mode available  
+
+---
+
+## 🎥 Live Demo / Screenshots
+
+Include GIFs or images showing:  
+1. Generating a quiz (Tab 1)  
+2. Viewing history table (Tab 2)  
+3. Opening details modal  
+
+Example Markdown for image/GIF embedding:
+
+```markdown
+![Generate Quiz](screenshots/generate_quiz.gif)
+![History Tab](screenshots/history_tab.gif)
+![Quiz Details](screenshots/quiz_details.gif)
+```
+
+Place GIFs in a `screenshots/` folder.
+
+---
+
+## ⚡ Technical Stack
+
+| Layer       | Technology                  |
+|------------|-----------------------------|
+| Backend     | Python, FastAPI, SQLAlchemy |
+| Database    | PostgreSQL / MySQL          |
+| Frontend    | React, TailwindCSS          |
+| AI / LLM    | Gemini via LangChain        |
+| Scraping    | BeautifulSoup, Requests     |
+
+---
+
+## 🧪 Testing
+
+- **Backend:** Postman or curl  
+- **Frontend:** 
+
 ```bash
 npm test
 ```
 
-## 📦 Deployment  
-```bash
-npm run build
-```
+- Verify quiz generation, history listing, and modal functionality.
 
-## 📄 License  
-MIT as per root project.
+---
+
+## 📄 License
+
+MIT License – see [LICENSE](LICENSE) for details.
+
+---
+
+## 🔗 GitHub Repository
+
+[https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator](https://github.com/Husamuddin-tech/AI-Wiki-Quiz-Generator)
