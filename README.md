@@ -31,15 +31,16 @@
 
 ```mermaid
 flowchart TD
-    A[User enters Wikipedia URL] --> B[Backend Scraper]
-    B --> C[Clean & Extract Article Text]
-    C --> D[Gemini LLM via LangChain]
-    D --> E[Generate Quiz JSON with Questions, Options, Answers, Explanation, Difficulty]
-    E --> F[Store Quiz in Database (PostgreSQL/MySQL)]
-    F --> G[Frontend displays Quiz]
-    G --> H[User can Take Quiz and Submit Answers]
-    G --> I[History Tab displays Past Quizzes]
-    I --> J[Click Details → Modal shows full quiz using QuizDisplay Component]
+    A["User enters Wikipedia URL"] --> B["Backend Scraper"]
+    B --> C["Clean & Extract Article Text"]
+    C --> D["Gemini LLM via LangChain"]
+    D --> E["Generate Quiz JSON with Questions, Options, Answers, Explanation, Difficulty"]
+    E --> F["Store Quiz in Database (PostgreSQL or MySQL)"]
+    F --> G["Frontend displays Quiz"]
+    G --> H["User can Take Quiz and Submit Answers"]
+    G --> I["History Tab displays Past Quizzes"]
+    I --> J["Click Details → Modal shows full quiz using QuizDisplay Component"]
+
 ```
 
 ---
