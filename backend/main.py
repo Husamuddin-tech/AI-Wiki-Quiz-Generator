@@ -3,6 +3,8 @@ import json
 import logging
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from fastapi.concurrency import run_in_threadpool
 from pydantic import BaseModel, HttpUrl
 from dotenv import load_dotenv
@@ -10,7 +12,6 @@ from dotenv import load_dotenv
 from database import init_db, Quiz, get_db
 from scraper import scrape_wikipedia
 from llm_quiz_generator import generate_quiz_payload
-
 # --- Load environment variables and initialize DB ---
 load_dotenv()
 init_db()
@@ -31,6 +32,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# --- Serve React build ---
+FRONTEND_BUILD_DIR = os.path.join(os.path.dirname(__file__), "../frontend/build")
+if os.path.exists(FRONTEND_BUILD_DIR):
+    app.mount("/", StaticFiles(directory=FRONTEND_BUILD_DIR, html=True), name="frontend")
+    logging.info(f"Serving React frontend from {FRONTEND_BUILD_DIR}")
+else:
+    logging.warning(f"React build directory not found at {FRONTEND_BUILD_DIR}. Build frontend first!")
+
 
 # --- Request model ---
 class GenerateRequest(BaseModel):
@@ -175,3 +185,13 @@ def get_quiz(quiz_id: int):
         return payload
 
 
+# --- Catch-all route for React Router ---
+@app.get("/{full_path:path}")
+def serve_react_app(full_path: str):
+    """
+    Serve React index.html for any unmatched route to support React Router
+    """
+    index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    raise HTTPException(status_code=404, detail="Frontend build not found")
