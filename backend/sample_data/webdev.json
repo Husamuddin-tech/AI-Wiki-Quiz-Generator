@@ -1,0 +1,138 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Web_development",
+  "title": "Web development",
+  "summary": "Web development is the work involved in developing a website for the Internet ( World Wide Web ) or an intranet (a private network). [ 1 ] Web development can range from developing a simple single static page of plain text to complex web applications , electronic businesses , and social network services . A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering , Web design , Web content development , client liaison, client-side / server-side scripting , Web server and network security configuration, and e-commerce development. Among Web professionals, \"Web development\" usually refers to the main non-design aspects of building Web sites: writing markup and coding . [ 2 ] Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.",
+  "key_entities": {
+    "people": [
+      "Tim Berners-Lee",
+      "Dale Dougherty",
+      "Debra Howcraft",
+      "John Carroll",
+      "Keil et al."
+    ],
+    "organizations": [
+      "CERN",
+      "O'Reilly",
+      "Media Live"
+    ],
+    "locations": []
+  },
+  "sections": [
+    "Introduction",
+    "Development of web sites and apps",
+    "Evolution of the World Wide Web and web development",
+    "Evolution of web development technologies",
+    "Web development life cycle",
+    "Traditional development methodologies",
+    "Key technologies in web development"
+  ],
+  "quiz": [
+    {
+      "question": "Among Web professionals, what does \"Web development\" usually refer to?",
+      "options": [
+        "A) Designing visual layouts and user interfaces.",
+        "B) Writing markup and coding.",
+        "C) Creating marketing strategies for websites.",
+        "D) Managing client liaison and content creation."
+      ],
+      "answer": "B) Writing markup and coding.",
+      "difficulty": "easy",
+      "explanation": "The article states, \"Among Web professionals, 'Web development' usually refers to the main non-design aspects of building Web sites: writing markup and coding.\""
+    },
+    {
+      "question": "Who created the World Wide Web in 1989?",
+      "options": [
+        "A) Dale Dougherty",
+        "B) Bill Gates",
+        "C) Tim Berners-Lee",
+        "D) Steve Jobs"
+      ],
+      "answer": "C) Tim Berners-Lee",
+      "difficulty": "easy",
+      "explanation": "The article states, \"Tim Berners-Lee created the World Wide Web in 1989 at CERN.\""
+    },
+    {
+      "question": "Which version of the web is characterized by increased user engagement, communication, and is often referred to as a user-focused, read-write online network?",
+      "options": [
+        "A) Web 1.0",
+        "B) Web 2.0",
+        "C) Web 3.0",
+        "D) Semantic Web"
+      ],
+      "answer": "B) Web 2.0",
+      "difficulty": "medium",
+      "explanation": "The article describes Web 2.0 as emphasizing interactivity, increased user engagement and communication, and being a user-focused, read-write online network."
+    },
+    {
+      "question": "According to Debra Howcraft and John Carroll, what is a significant drawback of the Waterfall methodology when applied to website development?",
+      "options": [
+        "A) It requires too many developers.",
+        "B) Its rigid structure lacks iteration beyond adjacent stages.",
+        "C) It does not cover the entire lifecycle of a development project.",
+        "D) It prioritizes speed over quality."
+      ],
+      "answer": "B) Its rigid structure lacks iteration beyond adjacent stages.",
+      "difficulty": "medium",
+      "explanation": "The article states, \"However, a significant drawback when applying the waterfall methodology to the development of websites (as well as information systems) lies in its rigid structure, lacking iteration beyond adjacent stages.\""
+    },
+    {
+      "question": "What are the three core technologies for front-end development?",
+      "options": [
+        "A) HTML, SQL, Python",
+        "B) CSS, PHP, Ruby",
+        "C) HTML, CSS, JavaScript",
+        "D) Java, XML, C++"
+      ],
+      "answer": "C) HTML, CSS, JavaScript",
+      "difficulty": "easy",
+      "explanation": "The article explicitly lists, \"The 3 core technologies for front-end development are: HTML (Hypertext Markup Language)... CSS (Cascading Style Sheet)... JavaScript: It is used to add interactions...\""
+    },
+    {
+      "question": "Which of the following is NOT one of the six tasks identified in the \"Objective analysis\" step of the Analysis phase in the web development life cycle?",
+      "options": [
+        "A) Technology analysis",
+        "B) Marketing analysis",
+        "C) Cost analysis",
+        "D) Risk analysis"
+      ],
+      "answer": "B) Marketing analysis",
+      "difficulty": "hard",
+      "explanation": "The article lists Technology analysis, Information analysis, Skills analysis, User analysis, Cost analysis, and Risk analysis as the six tasks. Marketing analysis is not listed."
+    },
+    {
+      "question": "Which technology, introduced in 1998, enabled the creation of more dynamic and interactive web applications by allowing asynchronous communication with the server?",
+      "options": [
+        "A) CSS",
+        "B) JavaScript",
+        "C) AJAX",
+        "D) HTML"
+      ],
+      "answer": "C) AJAX",
+      "difficulty": "medium",
+      "explanation": "The article mentions \"AJAX (1998)\" in the \"Evolution of web development technologies\" section, indicating its introduction in that year. AJAX is known for enabling asynchronous communication."
+    },
+    {
+      "question": "Which of these is NOT listed as a popular tool specifically for UI Wireframing in the article?",
+      "options": [
+        "A) Figma",
+        "B) Photoshop",
+        "C) Sketch",
+        "D) Uizard"
+      ],
+      "answer": "B) Photoshop",
+      "difficulty": "medium",
+      "explanation": "The article lists Sketch, Moqups, Figma, UXPin, MockFlow, Justinmind, and Uizard as popular UI Wireframing tools. Photoshop is not mentioned in this list."
+    }
+  ],
+  "related_topics": [
+    "Front-end web development",
+    "Back-end web development",
+    "Content management system",
+    "Web design",
+    "Software development life cycle",
+    "World Wide Web",
+    "Web accessibility",
+    "Agile software development"
+  ],
+  "id": 2
+}

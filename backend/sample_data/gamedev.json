@@ -1,0 +1,161 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Video_game_development",
+  "title": "Video game development",
+  "summary": "Video game development is a multidisciplinary process encompassing programming, design, art, audio, user interface, and writing, supported by project management and quality assurance. It has evolved from single-person projects in the 1970s, like Pitfall!, to large teams and multi-million dollar budgets for AAA titles today, while also seeing a flourishing of independent and mobile game development. The process typically involves concept, pre-production, full-scale production, and sometimes post-production, with funding often provided by publishers. The article details the historical progression of game development, key figures, and the financial aspects, including revenue distribution and the roles of producers and publishers.",
+  "key_entities": {
+    "people": [
+      "Alexander S. Douglas",
+      "Willy Higinbotham",
+      "Steve Russell",
+      "Ralph H. Baer",
+      "Tomohiro Nishikado",
+      "Dave Nutting",
+      "Jon Freeman",
+      "Chris Crawford",
+      "Don Daglow",
+      "Gabe Newell"
+    ],
+    "organizations": [
+      "Unity",
+      "Unreal Engine",
+      "Godot",
+      "Microsoft",
+      "Atari",
+      "Apple",
+      "3D Realms",
+      "Maxis",
+      "Taito",
+      "Nintendo"
+    ],
+    "locations": [
+      "Brookhaven National Laboratory",
+      "Massachusetts Institute of Technology"
+    ]
+  },
+  "sections": [
+    "Introduction",
+    "Overview",
+    "History",
+    "Roles"
+  ],
+  "quiz": [
+    {
+      "question": "What is 'gamedev' a shortened term for?",
+      "options": [
+        "Game design",
+        "Game development",
+        "Game production",
+        "Game programming"
+      ],
+      "answer": "Game development",
+      "difficulty": "easy",
+      "explanation": "The article states 'Video game development (sometimes shortened to gamedev) is the process of creating a video game.'"
+    },
+    {
+      "question": "What was the average cost of producing a high-end (AAA) game in 2000, according to the article?",
+      "options": [
+        "US$1–4 million",
+        "Over $200 million",
+        "US$18–28 million",
+        "$500k–$5 million"
+      ],
+      "answer": "US$1–4 million",
+      "difficulty": "medium",
+      "explanation": "The article states, 'The average cost of producing a high-end (often called AAA) game slowly rose from US$1–4 million in 2000, to over $200 million and up by 2023.'"
+    },
+    {
+      "question": "Which of the following is NOT explicitly listed as a specialized skill under 'art' in video game development?",
+      "options": [
+        "3D modeling of objects",
+        "Character modeling",
+        "Visual effects",
+        "User interface design"
+      ],
+      "answer": "User interface design",
+      "difficulty": "hard",
+      "explanation": "The article lists 'art includes 3D modeling of objects, character modeling, animation, visual effects, and so on.' User interface is listed as a separate multidisciplinary practice."
+    },
+    {
+      "question": "What percentage of total revenue can a developer retain through a mobile distribution channel, according to the article?",
+      "options": [
+        "Up to 32%",
+        "Up to 70%",
+        "Up to 85%",
+        "Up to 100%"
+      ],
+      "answer": "Up to 70%",
+      "difficulty": "medium",
+      "explanation": "The article states, '...through a mobile distribution channel the share of a developer can be up to 70% of the total revenue...'"
+    },
+    {
+      "question": "What is the typical development time for most modern PC or console games?",
+      "options": [
+        "A few months",
+        "Six weeks",
+        "One year",
+        "Three to five years"
+      ],
+      "answer": "Three to five years",
+      "difficulty": "easy",
+      "explanation": "The article states, 'Most modern PC or console games take from three to five years to complete...'"
+    },
+    {
+      "question": "Which game was the first commercially sold, coin-operated video game?",
+      "options": [
+        "Pong",
+        "Computer Space",
+        "Tennis for Two",
+        "OXO"
+      ],
+      "answer": "Computer Space",
+      "difficulty": "medium",
+      "explanation": "The article states, 'In 1971, Computer Space was the first commercially sold, coin-operated video game.'"
+    },
+    {
+      "question": "According to Gabe Newell, how many different games did Team Fortress 2 emerge from during its convoluted development process?",
+      "options": [
+        "One or two",
+        "Probably three or four",
+        "Five or six",
+        "Seven or eight"
+      ],
+      "answer": "Probably three or four",
+      "difficulty": "hard",
+      "explanation": "The article quotes Gabe Newell stating Team Fortress 2 emerged from 'probably three or four different games'."
+    },
+    {
+      "question": "What event did the flood of Pong clones lead to in 1977?",
+      "options": [
+        "The golden age of arcade video games",
+        "The release of the Atari 2600",
+        "The video game crash of 1977",
+        "The launch of the Apple App Store"
+      ],
+      "answer": "The video game crash of 1977",
+      "difficulty": "easy",
+      "explanation": "The article states, 'The flood of Pong clones led to the video game crash of 1977...'"
+    },
+    {
+      "question": "What is the primary difference between an internal producer and an external producer?",
+      "options": [
+        "Internal producers handle PR, external producers handle localization.",
+        "Internal producers manage the development team, external producers oversee developer progress and budget.",
+        "Internal producers negotiate contracts, external producers hire staff.",
+        "Internal producers work for the publisher, external producers work for the developer."
+      ],
+      "answer": "Internal producers manage the development team, external producers oversee developer progress and budget.",
+      "difficulty": "medium",
+      "explanation": "The article states, 'The producer working for the developer is known as the internal producer and manages the development team... The producer working for the publisher is known as the external producer and oversees developer progress and budget.'"
+    }
+  ],
+  "related_topics": [
+    "Video game design",
+    "Game engine",
+    "Independent video game development",
+    "Video game publisher",
+    "History of video games",
+    "Video game industry",
+    "Project management"
+  ],
+  "id": 4
+}

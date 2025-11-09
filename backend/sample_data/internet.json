@@ -1,0 +1,159 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Internet",
+  "title": "Internet",
+  "summary": "The Internet is a global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to facilitate communication between networks and devices worldwide. It encompasses a vast range of information services and resources, including the World Wide Web, electronic mail, and streaming media, and has profoundly transformed traditional communication, commerce, and personal interaction. While lacking a single centralized governance, key aspects like IP address space and the Domain Name System are managed by organizations such as ICANN and IETF. Its origins trace back to the 1960s with research into time-sharing and packet switching, leading to the development of the ARPANET. Significant milestones include the standardization of TCP/IP in 1982, the emergence of commercial Internet service providers in 1989, and the advent of the World Wide Web by Tim Berners-Lee in the early 1990s. The Internet became fully commercialized in the U.S. by 1995 and has since experienced exponential growth in users, mobile access, and data transmission, becoming a fundamental part of global culture, education, and economy.",
+  "key_entities": {
+    "people": [
+      "J. C. R. Licklider",
+      "Paul Baran",
+      "Donald Davies",
+      "Peter Kirstein",
+      "Vint Cerf",
+      "Bob Kahn",
+      "Louis Pouzin",
+      "Tim Berners-Lee"
+    ],
+    "organizations": [
+      "Bolt Beranek & Newman",
+      "Advanced Research Projects Agency (ARPA)",
+      "RAND",
+      "National Physical Laboratory",
+      "Defense Advanced Research Projects Agency (DARPA)",
+      "University of California, Los Angeles",
+      "Stanford Research Institute",
+      "University of California, Santa Barbara",
+      "University of Utah",
+      "Merit Network"
+    ],
+    "locations": [
+      "United States",
+      "United Kingdom",
+      "France",
+      "Norway",
+      "Europe",
+      "Australia",
+      "New Zealand",
+      "Japan",
+      "Asia",
+      "Asia and the Pacific"
+    ]
+  },
+  "sections": [
+    "Introduction",
+    "Terminology",
+    "History",
+    "Mobile communication",
+    "Social impact",
+    "Users",
+    "Information and education"
+  ],
+  "quiz": [
+    {
+      "question": "What protocol suite does the Internet use to communicate between networks and devices?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "TCP/IP",
+        "SMTP"
+      ],
+      "answer": "TCP/IP",
+      "difficulty": "easy",
+      "explanation": "The Internet uses the Internet protocol suite (TCP/IP) to communicate between networks and devices."
+    },
+    {
+      "question": "According to the article, what percentage of cases did the Oxford English Dictionary find the word \"Internet\" capitalized in 2016?",
+      "options": [
+        "100%",
+        "75%",
+        "54%",
+        "25%"
+      ],
+      "answer": "54%",
+      "difficulty": "medium",
+      "explanation": "In 2016, the Oxford English Dictionary found that, based on a study of around 2.5 billion printed and online sources, \"Internet\" was capitalized in 54% of cases."
+    },
+    {
+      "question": "Who proposed the idea of a universal network while working at ARPA's Information Processing Techniques Office?",
+      "options": [
+        "Paul Baran",
+        "Donald Davies",
+        "J. C. R. Licklider",
+        "Vint Cerf"
+      ],
+      "answer": "J. C. R. Licklider",
+      "difficulty": "easy",
+      "explanation": "J. C. R. Licklider proposed the idea of a universal network while working at Bolt Beranek & Newman and, later, leading the Information Processing Techniques Office at the Advanced Research Projects Agency (ARPA)."
+    },
+    {
+      "question": "When were the first two ARPANET network nodes interconnected?",
+      "options": [
+        "29 October 1969",
+        "1 January 1970",
+        "15 March 1971",
+        "4 July 1976"
+      ],
+      "answer": "29 October 1969",
+      "difficulty": "medium",
+      "explanation": "ARPANET development began with two network nodes which were interconnected between the University of California, Los Angeles and the Stanford Research Institute on 29 October 1969."
+    },
+    {
+      "question": "Who began writing WorldWideWeb, the first web browser, in 1990?",
+      "options": [
+        "Vint Cerf",
+        "Bob Kahn",
+        "Tim Berners-Lee",
+        "Louis Pouzin"
+      ],
+      "answer": "Tim Berners-Lee",
+      "difficulty": "medium",
+      "explanation": "Later in 1990, Tim Berners-Lee began writing WorldWideWeb, the first web browser."
+    },
+    {
+      "question": "By what year did the Internet carry more than 97% of all telecommunicated information?",
+      "options": [
+        "1993",
+        "2000",
+        "2007",
+        "2011"
+      ],
+      "answer": "2007",
+      "difficulty": "hard",
+      "explanation": "By 2007 more than 97% of all telecommunicated information was carried over the Internet."
+    },
+    {
+      "question": "As of 2022, what percentage of the world's Internet users were based in Asia?",
+      "options": [
+        "14%",
+        "54%",
+        "7%",
+        "11%"
+      ],
+      "answer": "54%",
+      "difficulty": "medium",
+      "explanation": "In 2022, 54% of the world's Internet users were based in Asia."
+    },
+    {
+      "question": "Which organization uses a wiki to allow the public to collaborate on finding prior art relevant to patent applications?",
+      "options": [
+        "CERN",
+        "ARPA",
+        "United States Patent and Trademark Office",
+        "ICANN"
+      ],
+      "answer": "United States Patent and Trademark Office",
+      "difficulty": "easy",
+      "explanation": "The United States Patent and Trademark Office uses a wiki to allow the public to collaborate on finding prior art relevant to examination of pending patent applications."
+    }
+  ],
+  "related_topics": [
+    "World Wide Web",
+    "TCP/IP",
+    "ARPANET",
+    "Packet switching",
+    "History of the Internet",
+    "Internet governance",
+    "Digital divide",
+    "Social media"
+  ],
+  "id": 1
+}
