@@ -56,3 +56,4 @@ def get_db():
         raise
     finally:
         session.close()
+
