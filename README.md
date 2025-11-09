@@ -154,23 +154,28 @@ Access app at `http://localhost:5173`.
 
 ## 🎥 Live Demo / Screenshots
 
-Include GIFs or images showing:  
-1. Generating a quiz (Tab 1)  
-2. Viewing history table (Tab 2)  
-3. Opening details modal  
+Here’s a visual walkthrough of the **AI Wiki Quiz Generator**:
 
-Example Markdown for image/GIF embedding:
-
-
-![Home Page](screenshots/home.png)
+### 1️⃣ Generating a Quiz (Tab 1)
 ![Generate Quiz](screenshots/quiz.png)
+*User enters a Wikipedia URL and the quiz is generated.*
+
+### 2️⃣ Viewing Quiz Answers
 ![Quiz Answers](screenshots/answers.png)
+*Interactive quiz interface showing questions and options.*
+
+### 3️⃣ History Tab (Tab 2)
 ![History Tab](screenshots/history.png)
+*Displays all previously generated quizzes in a structured table.*
+
+### 4️⃣ Viewing Quiz Details
 ![Quiz Details](screenshots/quiz_details.png)
+*Clicking “Details” opens a modal showing the full quiz using the QuizDisplay component.*
 
 
+> **Note:** GitHub cannot preview `.mp4` files directly. To include a video, either provide a **GIF** or link the video:
+[Watch Demo Video](https://drive.google.com/file/d/1ZXeuPsjsoYecZpklNybGKkwRevb6D8O5/view?usp=drive_link)
 
-![Demo](screenshots/demo.mp4)
 
 
 ---
