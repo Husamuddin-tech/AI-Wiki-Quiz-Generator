@@ -178,10 +178,8 @@ def get_quiz(quiz_id: int):
 
 # --- Catch-all GET route for React Router ---
 @app.get("/{full_path:path}")
+@app.get("/{full_path:path}")
 def serve_react_app(full_path: str):
-    """
-    Serve React index.html for any unmatched route to support React Router
-    """
     index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path)
