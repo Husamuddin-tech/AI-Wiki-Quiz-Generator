@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from database import init_db, Quiz, get_db
 from scraper import scrape_wikipedia
 from llm_quiz_generator import generate_quiz_payload
+
 # --- Load environment variables and initialize DB ---
 load_dotenv()
 init_db()
@@ -33,53 +34,47 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Serve React build ---
-FRONTEND_BUILD_DIR = os.path.join(os.path.dirname(__file__), "../frontend/build")
+# --- Serve React build (static files under /static) ---
+FRONTEND_BUILD_DIR = os.path.join(os.path.dirname(__file__), "../frontend/dist")
 if os.path.exists(FRONTEND_BUILD_DIR):
-    app.mount("/", StaticFiles(directory=FRONTEND_BUILD_DIR, html=True), name="frontend")
-    logging.info(f"Serving React frontend from {FRONTEND_BUILD_DIR}")
+    app.mount("/static", StaticFiles(directory=FRONTEND_BUILD_DIR), name="frontend")
+    logging.info(f"Serving React frontend static files from {FRONTEND_BUILD_DIR}")
 else:
     logging.warning(f"React build directory not found at {FRONTEND_BUILD_DIR}. Build frontend first!")
 
-
-# --- Request model ---
+# --- Request models ---
 class GenerateRequest(BaseModel):
     url: HttpUrl
     force: bool = False
-
 
 class QuizSubmitRequest(BaseModel):
     quiz_id: int
     answers: dict  # {question_index: "A"/"B"/"C"/"D"}
 
-
+# --- Healthcheck ---
 @app.get("/health")
 def healthcheck():
     return {"status": "ok"}
 
-
+# --- API Endpoints ---
 @app.post("/generate_quiz")
 async def generate_quiz(body: GenerateRequest):
     url_str = str(body.url)
-
     logging.info(f"Received quiz generation request for URL: {url_str} (force={body.force})")
 
-    # --- Database session ---
     with get_db() as session:
         existing = session.query(Quiz).filter(Quiz.url == url_str).one_or_none()
 
-        # Return cached quiz if exists and not forced
         if existing and not body.force:
             logging.info(f"Returning cached quiz for URL: {url_str}")
             payload = json.loads(existing.full_quiz_data)
-            payload["id"] = existing.id  # Ensure ID is set
+            payload["id"] = existing.id
             return payload
 
-        # --- Scrape Wikipedia article ---
         try:
             title, summary, body_text, raw_html, sections, section_text_map = await run_in_threadpool(
-            scrape_wikipedia, url_str
-        )
+                scrape_wikipedia, url_str
+            )
             logging.info(f"Scraped article: {title}, sections found: {len(sections)}")
         except Exception as e:
             logging.error(f"Scrape failed: {e}")
@@ -88,7 +83,6 @@ async def generate_quiz(body: GenerateRequest):
         if not body_text:
             raise HTTPException(status_code=422, detail="Could not extract article body text.")
 
-        # --- Generate quiz via LLM ---
         try:
             payload = await run_in_threadpool(generate_quiz_payload, url_str, title, summary, body_text, sections, section_text_map)
             logging.info(f"Generated quiz payload for: {title}")
@@ -96,7 +90,6 @@ async def generate_quiz(body: GenerateRequest):
             logging.error(f"LLM generation failed: {e}")
             raise HTTPException(status_code=500, detail=f"LLM generation failed: {e}")
 
-        # --- Ensure sections from scraper are preserved ---
         payload["sections"] = sections if sections else payload.get("sections", [])
 
         # --- Save to DB ---
@@ -173,7 +166,6 @@ def history():
             for r in rows
         ]
 
-
 @app.get("/quiz/{quiz_id}")
 def get_quiz(quiz_id: int):
     with get_db() as session:
@@ -181,11 +173,10 @@ def get_quiz(quiz_id: int):
         if not r:
             raise HTTPException(status_code=404, detail="Quiz not found")
         payload = json.loads(r.full_quiz_data)
-        payload["id"] = r.id  # Ensure ID is always set
+        payload["id"] = r.id
         return payload
 
-
-# --- Catch-all route for React Router ---
+# --- Catch-all GET route for React Router ---
 @app.get("/{full_path:path}")
 def serve_react_app(full_path: str):
     """

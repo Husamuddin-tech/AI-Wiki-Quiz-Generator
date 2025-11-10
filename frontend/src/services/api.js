@@ -1,4 +1,7 @@
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const BASE_URL = (
+  import.meta.env.VITE_API_URL || 'http://localhost:8000'
+).replace(/\/+$/, '');
+
 const DEFAULT_HEADERS = { 'Content-Type': 'application/json' };
 
 // Utility to handle fetch with timeout
@@ -34,7 +37,10 @@ async function fetchWithTimeout(url, options = {}, timeout = 60000) {
 export async function generateQuiz(url, force = false) {
   return await fetchWithTimeout(`${BASE_URL}/generate_quiz`, {
     method: 'POST',
-    headers: DEFAULT_HEADERS,
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
     body: JSON.stringify({ url, force }),
   });
 }
